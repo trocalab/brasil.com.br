@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>Troca de Valor™ · Marketing Profissional por Experiências</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* ═══════════════════════════════════════
    DESIGN SYSTEM · DARK PREMIUM + NEON GREEN
@@ -1447,6 +1457,745 @@ footer { border-top-color: rgba(255,199,0,.07); }
     max-width: 90vw;
   }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   FULL RESPONSIVE SYSTEM
+   320px · 375px · 390px · 768px · 1024px · 1440px+
+   Rules: adapt, not redesign. Zero structural changes.
+═══════════════════════════════════════════════════════════════ */
+
+/* ── GLOBAL OVERFLOW GUARD ──────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { max-width: 100%; overflow-x: hidden; }
+img, video, iframe, canvas, svg { max-width: 100%; }
+
+/* ── ALERT BAR: wraps cleanly on narrow screens ─────────────── */
+.alert-bar {
+  font-size: .72rem;
+  padding: 9px 16px;
+  line-height: 1.5;
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* ── NAV ─────────────────────────────────────────────────────── */
+nav { padding: 14px 5%; }
+.logo { font-size: 1.1rem; }
+
+/* ── HERO ────────────────────────────────────────────────────── */
+.t-hero {
+  font-size: clamp(1.9rem, 8vw, 4.6rem);
+  letter-spacing: -.025em;
+}
+.t-h2 {
+  font-size: clamp(1.5rem, 5vw, 2.8rem);
+}
+.hero-badge {
+  font-size: .68rem;
+  padding: 7px 16px;
+}
+.hero .t-body {
+  font-size: clamp(.9rem, 2.5vw, 1.1rem);
+  padding: 0 4px;
+}
+.btn-hero {
+  min-height: 52px;
+  font-size: clamp(.95rem, 2.5vw, 1.05rem);
+}
+.cta-micro {
+  font-size: .7rem;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.social-proof { margin-top: 36px; flex-wrap: wrap; gap: 8px; }
+.sp-text { font-size: .78rem; }
+
+/* ── SECTIONS ────────────────────────────────────────────────── */
+.section { padding: 80px 5%; }
+.section.alt { padding: 80px 5%; }
+.sec-head { margin-bottom: 40px; }
+
+/* ── WHO CARD ────────────────────────────────────────────────── */
+.who-card { border-radius: 16px; }
+.who-text { font-size: .88rem; }
+.who-text p { font-size: .82rem; }
+
+/* ── STEPS ────────────────────────────────────────────────────── */
+.step h3 { font-size: .95rem; }
+.step p { font-size: .84rem; }
+.step-n { width: 44px; height: 44px; font-size: .9rem; }
+
+/* ── IA CARDS ────────────────────────────────────────────────── */
+.ia-grid { gap: 12px; }
+.ia-card { padding: 22px 18px; }
+.ia-card h4 { font-size: .88rem; }
+.ia-card p { font-size: .77rem; }
+
+/* ── PROOF STRIP ─────────────────────────────────────────────── */
+.proof-card-value { font-size: 1.15rem; }
+.proof-card-label { font-size: .68rem; }
+
+/* ── TESTIMONIALS ────────────────────────────────────────────── */
+.t-text { font-size: .86rem; }
+.t-name { font-size: .85rem; }
+
+/* ── OFFER BOX ───────────────────────────────────────────────── */
+.offer-head h3 { font-size: 1.25rem; }
+.bonus-text strong { font-size: .85rem; }
+.bonus-text span { font-size: .75rem; }
+.price-val { font-size: 4.5rem; }
+.btn-buy { min-height: 56px; font-size: 1rem; }
+
+/* ── FAQ ──────────────────────────────────────────────────────── */
+.faq-btn { font-size: .9rem; padding: 20px 0; }
+.faq-body { font-size: .84rem; }
+
+/* ── FINAL CTA ───────────────────────────────────────────────── */
+.final-cta .t-h2 { font-size: clamp(1.4rem, 4vw, 2.4rem); }
+.final-cta .t-body { font-size: .92rem; }
+.countdown { flex-wrap: wrap; }
+.cd-num { font-size: 2rem; }
+
+/* ── PORTFOLIO BUTTON ────────────────────────────────────────── */
+.portfolio-overlay-link {
+  font-size: .82rem;
+  padding: 12px 24px;
+}
+
+
+/* ══════════════════════════════════════════
+   TABLET — 641px to 900px
+══════════════════════════════════════════ */
+@media (min-width: 641px) and (max-width: 900px) {
+  /* Layout */
+  .section, .section.alt { padding: 72px 5%; }
+  .hero { padding: 90px 5% 0; }
+
+  /* Hero */
+  .t-hero { font-size: clamp(2.2rem, 6vw, 3.6rem); }
+  .btn-hero { max-width: 420px; font-size: 1rem; padding: 18px 40px; }
+
+  /* Stats strip — 2x2 grid on tablet */
+  .proof-strip-inner { flex-wrap: wrap; }
+  .proof-card { flex: 1 1 50%; min-width: 0; }
+  .proof-divider:nth-child(4) { display: none; } /* hide middle divider */
+
+  /* Who card */
+  .who-card { max-width: 100%; }
+
+  /* IA grid — 2 cols on tablet */
+  .ia-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Offer */
+  .offer-head, .offer-body { padding: 32px 28px; }
+
+  /* Portfolio */
+  .portfolio-slide { flex: 0 0 280px; }
+  .portfolio-slide img { height: 200px; }
+
+  /* Carousel */
+  .carousel-slide { flex: 0 0 185px; }
+  .carousel-slide img { height: 310px; }
+
+  /* Manifesto */
+  .manifesto { padding: 72px 6%; }
+
+  /* Countdown */
+  .cd-num { font-size: 2rem; padding: 11px 16px; min-width: 60px; }
+}
+
+
+/* ══════════════════════════════════════════
+   MOBILE — max 640px
+══════════════════════════════════════════ */
+@media (max-width: 640px) {
+
+  /* ── Layout base ─── */
+  .section, .section.alt, .section.dark, .section.orange-tint {
+    padding: 56px 5%;
+  }
+  .sec-head { margin-bottom: 32px; }
+  .section-divider { margin: 0; }
+
+  /* ── Hero ─── */
+  .hero { padding: 68px 5% 0; min-height: auto; }
+  .hero::after { display: none; } /* remove grid bg on tiny screens */
+  .t-hero {
+    font-size: clamp(1.75rem, 9vw, 2.4rem);
+    letter-spacing: -.02em;
+    line-height: 1.1;
+    margin-bottom: 18px;
+  }
+  .hero .t-body {
+    font-size: .9rem;
+    margin-bottom: 32px;
+    max-width: 100%;
+  }
+  .hero-badge {
+    font-size: .64rem;
+    padding: 6px 14px;
+    margin-bottom: 20px;
+    letter-spacing: .04em;
+  }
+  .hero-cta-wrap { gap: 10px; width: 100%; }
+  .btn-hero {
+    width: 100%;
+    max-width: 100%;
+    padding: 17px 24px;
+    font-size: .95rem;
+    min-height: 52px;
+  }
+  .cta-micro { font-size: .67rem; gap: 4px; }
+  .social-proof { margin-top: 28px; gap: 6px; }
+  .avatars span { width: 32px; height: 32px; font-size: .65rem; }
+  .sp-text { font-size: .74rem; }
+
+  /* ── Alert bar ─── */
+  .alert-bar { font-size: .68rem; padding: 8px 12px; }
+
+  /* ── Ticker ─── */
+  .ticker { padding: 9px 0; }
+  .ticker-t { font-size: .62rem; letter-spacing: .1em; gap: 36px; }
+
+  /* ── Section headings ─── */
+  .t-h2 {
+    font-size: clamp(1.4rem, 7vw, 2rem);
+    line-height: 1.2;
+  }
+  .t-body { font-size: .88rem; line-height: 1.75; }
+  .t-label { font-size: .62rem; letter-spacing: .12em; }
+
+  /* ── Who card ─── */
+  .who-card { border-radius: 14px; }
+  .who-row { padding: 14px 16px; gap: 12px; }
+  .who-ico { width: 36px; height: 36px; flex-shrink: 0; }
+  .who-text { font-size: .84rem; }
+  .who-text strong { font-size: .84rem; }
+  .who-text p { font-size: .78rem; margin-top: 3px; }
+
+  /* ── Steps ─── */
+  .steps-wrap::before { left: 20px; }
+  .step { gap: 14px; padding: 18px 0; }
+  .step-n { width: 40px; height: 40px; font-size: .85rem; flex-shrink: 0; }
+  .step h3 { font-size: .9rem; margin-bottom: 5px; }
+  .step p { font-size: .82rem; }
+  .step-tag { font-size: .62rem; padding: 3px 10px; }
+
+  /* ── IA Cards ─── */
+  .ia-grid { grid-template-columns: 1fr; gap: 10px; }
+  .ia-card { padding: 20px 16px; }
+  .ia-card h4 { font-size: .86rem; }
+  .ia-card p { font-size: .76rem; }
+  .ia-ico { width: 38px; height: 38px; border-radius: 10px; }
+
+  /* ── Proof strip ─── */
+  .proof-strip-inner {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .proof-card {
+    flex: 1 1 50%;
+    min-width: 0;
+    padding: 22px 12px;
+    gap: 10px;
+  }
+  .proof-divider {
+    display: none; /* clean wrap, no dividers on mobile */
+  }
+  .proof-card-icon { width: 36px; height: 36px; border-radius: 10px; }
+  .proof-card-value { font-size: 1.05rem; }
+  .proof-card-label { font-size: .64rem; }
+
+  /* ── Testimonials ─── */
+  .proof-grid { grid-template-columns: 1fr; gap: 14px; }
+  .t-result { font-size: .73rem; padding: 6px 10px; }
+  .t-text { font-size: .84rem; }
+  .t-name { font-size: .82rem; }
+  .t-role { font-size: .7rem; }
+  .t-avatar { width: 36px; height: 36px; font-size: .85rem; }
+
+  /* ── Offer box ─── */
+  .offer-wrap { padding: 0; }
+  .offer-head, .offer-body { padding: 24px 18px; }
+  .offer-head h3 { font-size: 1.1rem; }
+  .bonus-list { gap: 9px; }
+  .bonus-item { padding: 12px 14px; gap: 10px; }
+  .check-c { width: 20px; height: 20px; flex-shrink: 0; }
+  .bonus-text strong { font-size: .82rem; }
+  .bonus-text span { font-size: .73rem; }
+  .price-block { padding: 20px 16px; }
+  .price-val { font-size: 3.8rem; }
+  .price-cur, .price-dec { font-size: 1.2rem; margin-top: 12px; }
+  .price-was { font-size: .84rem; }
+  .price-note { font-size: .7rem; }
+  .urgency-bar { padding: 11px 14px; }
+  .urgency-bar p { font-size: .78rem; }
+  .guarantee { padding: 16px; gap: 12px; }
+  .guarantee h4 { font-size: .85rem; }
+  .guarantee p { font-size: .74rem; }
+  .trust-icons { gap: 12px; }
+  .trust-icon { font-size: .68rem; }
+  .btn-buy {
+    padding: 18px 20px;
+    font-size: .95rem;
+    min-height: 52px;
+  }
+
+  /* ── FAQ ─── */
+  .faq-list { padding: 0; }
+  .faq-btn { font-size: .86rem; padding: 18px 0; }
+  .faq-body { font-size: .82rem; line-height: 1.8; }
+
+  /* ── Manifesto ─── */
+  .manifesto { padding: 56px 5%; }
+  .manifesto-text { font-size: clamp(.95rem, 4vw, 1.15rem); line-height: 1.7; }
+
+  /* ── Final CTA ─── */
+  .final-cta { padding: 64px 5%; }
+  .final-cta .t-h2 { font-size: clamp(1.3rem, 7vw, 1.9rem); }
+  .final-cta .t-body { font-size: .88rem; margin-bottom: 32px; }
+  .countdown { gap: 6px; margin-bottom: 32px; }
+  .cd-num { font-size: 1.6rem; padding: 9px 12px; min-width: 48px; border-radius: 10px; }
+  .cd-label { font-size: .6rem; }
+  .cd-sep { font-size: 1.6rem; }
+
+  /* ── Portfolio button ─── */
+  .portfolio-overlay-link {
+    font-size: .8rem;
+    padding: 12px 22px;
+    min-height: 46px;
+    width: auto;
+  }
+
+  /* ── Portfolio carousel ─── */
+  .portfolio-carousel-wrap { margin-top: 0; }
+  .portfolio-slide { flex: 0 0 230px; }
+  .portfolio-slide img { height: 165px; }
+
+  /* ── Stats ─── */
+  .stats-row { grid-template-columns: 1fr 1fr; border-radius: 14px; }
+  .stat-box { padding: 28px 14px; }
+  .stat-n { font-size: 2rem; }
+  .stat-label { font-size: .72rem; }
+
+  /* ── Footer ─── */
+  footer { padding: 36px 5%; }
+  .flogo { font-size: 1.1rem; }
+  footer small { font-size: .68rem; }
+}
+
+
+/* ══════════════════════════════════════════
+   TINY MOBILE — max 380px (320px–375px)
+══════════════════════════════════════════ */
+@media (max-width: 380px) {
+  /* Hero headline */
+  .t-hero { font-size: clamp(1.6rem, 9.5vw, 1.9rem); }
+  .t-h2 { font-size: clamp(1.25rem, 8vw, 1.6rem); }
+
+  /* Steps: stack icon above text on 320px */
+  .step { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .steps-wrap::before { display: none; }
+  .step-n { width: 36px; height: 36px; font-size: .8rem; }
+
+  /* IA cards: full width, compact */
+  .ia-grid { grid-template-columns: 1fr; }
+  .ia-card { padding: 16px 14px; }
+
+  /* Proof strip: 2 cols maintained, smaller */
+  .proof-card { padding: 18px 8px; }
+  .proof-card-value { font-size: .95rem; }
+  .proof-card-icon { width: 30px; height: 30px; display: none; } /* hide icons at 320px */
+
+  /* Offer: smaller price */
+  .price-val { font-size: 3.2rem; }
+  .price-cur, .price-dec { font-size: 1.1rem; }
+
+  /* Carousel: narrower slides */
+  .carousel-slide { flex: 0 0 140px; }
+  .carousel-slide img { height: 240px; }
+  .portfolio-slide { flex: 0 0 200px; }
+  .portfolio-slide img { height: 145px; }
+
+  /* Countdown even tighter */
+  .cd-num { font-size: 1.4rem; padding: 7px 10px; min-width: 42px; }
+  .cd-sep { font-size: 1.4rem; }
+
+  /* Buttons always full-width */
+  .btn-hero, .btn-buy { width: 100%; padding: 16px 16px; font-size: .9rem; }
+
+  /* Who card */
+  .who-ico { width: 32px; height: 32px; }
+  .who-text { font-size: .8rem; }
+}
+
+
+/* ══════════════════════════════════════════
+   DESKTOP GUARD — ensure nothing breaks ≥1440px
+══════════════════════════════════════════ */
+@media (min-width: 1440px) {
+  .section, .section.alt { padding: 96px 8%; }
+  .hero { padding: 110px 8% 0; }
+  .manifesto { padding: 96px 8%; }
+  .final-cta { padding: 120px 8%; }
+  nav { padding: 16px 8%; }
+}
+
+/* ── OVERFLOW SAFETY NET ─────────────────────────────────────── */
+/* Catch any element that might cause horizontal scroll */
+@media (max-width: 640px) {
+  .hero, .section, .section.alt, .section.dark,
+  .section.orange-tint, .final-cta, .manifesto, footer {
+    overflow-x: hidden;
+  }
+  /* Ensure two-col always stacks */
+  .two-col { grid-template-columns: 1fr !important; gap: 32px; }
+  .who-card { max-width: 100%; }
+  /* Ticker: no overflow issues */
+  .ticker { overflow: hidden; }
+}
+
+/* ═══ END RESPONSIVE SYSTEM ═══ */
+
+
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE SYSTEM — Mobile · Tablet · Desktop
+   Breakpoints:
+     xs  : ≤ 374px  (small phones)
+     sm  : ≤ 640px  (mobile)
+     md  : ≤ 900px  (tablet)
+     lg  : ≥ 1280px (large desktop)
+   No visual changes — only layout/spacing adaptation.
+═══════════════════════════════════════════════════════════ */
+
+/* ─── GLOBAL: prevent horizontal overflow on all screens ─── */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+* { box-sizing: border-box; }
+img, svg, video { max-width: 100%; }
+
+/* ─── LARGE DESKTOP (≥ 1280px) ─────────────────────────── */
+@media (min-width: 1280px) {
+  .section        { padding: 104px 7%; }
+  .hero           { padding: 110px 7% 0; }
+  .manifesto      { padding: 110px 7%; }
+  .final-cta      { padding: 140px 7%; }
+  .two-col        { max-width: 1180px; gap: 72px; }
+  .proof-grid     { grid-template-columns: repeat(3, 1fr); }
+  .ia-grid        { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ─── TABLET (641px – 900px) ────────────────────────────── */
+@media (max-width: 900px) {
+  /* Typography scale */
+  .t-hero   { font-size: clamp(2rem, 5.5vw, 3.2rem); }
+  .t-h2     { font-size: clamp(1.5rem, 4vw, 2.2rem); }
+
+  /* Hero */
+  .hero                { padding: 80px 5% 0; }
+  .hero .t-hero        { max-width: 680px; }
+  .hero .t-body        { max-width: 540px; }
+  .social-proof        { margin-top: 40px; }
+
+  /* Sections */
+  .section             { padding: 72px 5%; }
+  .manifesto           { padding: 72px 5%; }
+  .final-cta           { padding: 88px 5%; }
+
+  /* Two-col already stacks via existing rule — reinforce gaps */
+  .two-col             { gap: 36px; }
+
+  /* IA grid: 2 columns on tablet */
+  .ia-grid             { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+  /* Stats: 2x2 */
+  .stats-row           { grid-template-columns: repeat(2, 1fr); }
+  .stat-box            { padding: 32px 16px; }
+  .stat-n              { font-size: 2rem; }
+
+  /* Proof grid */
+  .proof-grid          { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  /* Offer */
+  .offer-wrap          { max-width: 100%; }
+  .offer-head          { padding: 32px; }
+  .offer-body          { padding: 32px; }
+
+  /* FAQ max-width */
+  .faq-list            { max-width: 100%; }
+
+  /* Who card */
+  .who-card            { max-width: 100%; }
+
+  /* Countdown */
+  .cd-num              { font-size: 2rem; padding: 10px 16px; min-width: 60px; }
+
+  /* Portfolio slides a bit narrower */
+  .portfolio-slide     { flex: 0 0 300px; }
+  .portfolio-slide img { height: 210px; }
+
+  /* Manifesto inner */
+  .manifesto-inner     { max-width: 600px; }
+}
+
+/* ─── MOBILE (≤ 640px) ──────────────────────────────────── */
+@media (max-width: 640px) {
+
+  /* ── Typography ── */
+  .t-hero {
+    font-size: clamp(1.75rem, 8.5vw, 2.4rem);
+    letter-spacing: -.025em;
+    line-height: 1.1;
+  }
+  .t-h2 {
+    font-size: clamp(1.4rem, 6.5vw, 1.9rem);
+    letter-spacing: -.02em;
+  }
+  .t-body {
+    font-size: .94rem;
+    line-height: 1.8;
+  }
+  .t-label {
+    font-size: .62rem;
+    letter-spacing: .1em;
+  }
+
+  /* ── Global layout ── */
+  .section        { padding: 56px 5%; }
+  .sec-head       { margin-bottom: 36px; }
+
+  /* ── Alert bar ── */
+  .alert-bar {
+    font-size: .7rem;
+    padding: 9px 16px;
+    letter-spacing: .01em;
+    white-space: normal;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  /* ── NAV ── */
+  nav {
+    padding: 12px 5%;
+    top: 0; /* alert bar not sticky on mobile — simplify */
+  }
+  nav .btn-orange { display: none; } /* already exists, reinforce */
+  .logo           { font-size: 1rem; }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 64px 5% 0;
+    min-height: auto;
+  }
+  .hero-badge {
+    font-size: .65rem;
+    padding: 7px 14px;
+    margin-bottom: 20px;
+  }
+  .badge-dot { width: 6px; height: 6px; }
+  .hero .t-hero {
+    margin-bottom: 16px;
+  }
+  .hero .t-body {
+    margin-bottom: 32px;
+    font-size: .93rem;
+  }
+  .hero-cta-wrap  { gap: 10px; width: 100%; padding: 0; }
+  .btn-hero {
+    padding: 17px 28px;
+    font-size: .95rem;
+    max-width: 100%;
+    width: 100%;
+    min-height: 52px;
+  }
+  .cta-micro {
+    font-size: .68rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .social-proof   { margin-top: 32px; flex-wrap: wrap; gap: 8px; }
+  .sp-text        { font-size: .76rem; }
+  .avatars span   { width: 32px; height: 32px; font-size: .65rem; }
+
+  /* ── Carousel (results) ── */
+  .carousel-wrap  { margin-top: 36px; }
+  .carousel-label { font-size: .65rem; }
+  .carousel-slide { flex: 0 0 140px; }
+  .carousel-slide img { height: 240px; }
+
+  /* ── Ticker ── */
+  .ticker { padding: 9px 0; }
+  .ticker-t { font-size: .62rem; gap: 36px; }
+
+  /* ── Para quem é (who-card) ── */
+  .who-card       { border-radius: var(--r-lg); }
+  .who-row        { padding: 14px 16px; gap: 12px; }
+  .who-ico        { width: 36px; height: 36px; flex-shrink: 0; }
+  .who-text       { font-size: .84rem; }
+  .who-text strong { font-size: .88rem; }
+  .who-text p     { font-size: .8rem; margin-top: 3px; }
+
+  /* ── Steps (como funciona) ── */
+  .steps-wrap::before { left: 19px; }
+  .step-n         { width: 40px; height: 40px; font-size: .88rem; }
+  .step           { gap: 14px; padding: 18px 0; }
+  .step h3        { font-size: .93rem; }
+  .step p         { font-size: .82rem; }
+  .step-tag       { font-size: .6rem; }
+
+  /* ── IA Grid ── */
+  .ia-grid        { grid-template-columns: 1fr; gap: 10px; }
+  .ia-card        { padding: 20px 18px; }
+  .ia-ico         { width: 38px; height: 38px; margin-bottom: 12px; }
+  .ia-card h4     { font-size: .88rem; }
+  .ia-card p      { font-size: .78rem; }
+
+  /* ── Portfolio ── */
+  .portfolio-slide      { flex: 0 0 240px; }
+  .portfolio-slide img  { height: 170px; }
+  .portfolio-carousel-wrap { max-width: 100%; }
+
+  /* Portfolio CTA button */
+  .portfolio-overlay-link {
+    font-size: .8rem;
+    padding: 12px 22px;
+    max-width: calc(100% - 32px);
+    text-align: center;
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  /* ── Proof strip ── */
+  .proof-strip .proof-strip-inner {
+    flex-direction: column;
+    gap: 0;
+  }
+  .proof-card     { padding: 20px 16px; width: 100%; }
+  .proof-divider  { width: 100%; height: 1px; margin: 0; }
+  .proof-card-value { font-size: 1.1rem; }
+  .proof-card-label { font-size: .68rem; }
+
+  /* ── Testimonials ── */
+  .proof-grid     { grid-template-columns: 1fr; gap: 14px; }
+  .t-text         { font-size: .84rem; }
+  .t-name         { font-size: .84rem; }
+
+  /* ── Offer / Oferta ── */
+  .offer-wrap          { padding: 0; }
+  .offer-head          { padding: 22px 18px; }
+  .offer-head h3       { font-size: 1.15rem; }
+  .offer-body          { padding: 22px 18px; }
+  .bonus-text strong   { font-size: .84rem; }
+  .bonus-text span     { font-size: .74rem; }
+  .bonus-item          { padding: 12px 14px; gap: 10px; }
+  .price-block         { padding: 20px 16px; }
+  .price-val           { font-size: 3.8rem; }
+  .price-cur,
+  .price-dec           { font-size: 1.1rem; margin-top: 10px; }
+  .price-was           { font-size: .82rem; }
+  .price-note          { font-size: .7rem; }
+  .btn-buy {
+    font-size: 1rem;
+    padding: 18px;
+    min-height: 52px;
+  }
+  .urgency-bar    { flex-direction: column; gap: 4px; padding: 12px 14px; }
+  .urgency-bar p  { font-size: .78rem; text-align: center; }
+  .guarantee      { gap: 10px; padding: 16px; }
+  .guarantee-ico  { width: 36px; height: 36px; }
+  .guarantee h4   { font-size: .84rem; }
+  .guarantee p    { font-size: .73rem; }
+  .trust-icons    { gap: 12px; }
+  .trust-icon     { font-size: .67rem; }
+
+  /* ── FAQ ── */
+  .faq-btn        { font-size: .86rem; padding: 18px 0; }
+  .faq-body       { font-size: .82rem; line-height: 1.75; }
+  .faq-item.open .faq-body { max-height: 400px; } /* more room for longer answers */
+
+  /* ── Final CTA ── */
+  .final-cta      { padding: 72px 5%; }
+  .final-cta .t-h2 { max-width: 100%; }
+  .final-cta .t-body { max-width: 100%; margin-bottom: 32px; font-size: .93rem; }
+  .countdown      { gap: 6px; margin-bottom: 28px; }
+  .cd-num         { font-size: 1.6rem; padding: 9px 12px; min-width: 46px; border-radius: 10px; }
+  .cd-label       { font-size: .58rem; letter-spacing: .07em; }
+  .cd-sep         { font-size: 1.6rem; }
+
+  /* ── Manifesto ── */
+  .manifesto      { padding: 60px 5%; }
+  .manifesto-text { font-size: clamp(.95rem, 4vw, 1.15rem); }
+  .manifesto-quote { font-size: .62rem; }
+
+  /* ── Footer ── */
+  footer          { padding: 36px 5%; }
+  footer small    { font-size: .68rem; }
+  .flogo          { font-size: 1rem; }
+}
+
+/* ─── SMALL MOBILE (≤ 374px) ───────────────────────────── */
+@media (max-width: 374px) {
+  .t-hero  { font-size: 1.65rem; }
+  .t-h2    { font-size: 1.3rem; }
+  .section { padding: 48px 4.5%; }
+
+  .btn-hero, .btn-buy {
+    font-size: .88rem;
+    padding: 16px 20px;
+  }
+
+  .hero-badge  { font-size: .6rem; padding: 6px 12px; }
+  .carousel-slide { flex: 0 0 124px; }
+  .carousel-slide img { height: 210px; }
+
+  .portfolio-slide     { flex: 0 0 200px; }
+  .portfolio-slide img { height: 145px; }
+
+  .cd-num { font-size: 1.35rem; padding: 8px 10px; min-width: 40px; }
+  .stats-row { grid-template-columns: 1fr 1fr; }
+  .stat-n    { font-size: 1.6rem; }
+  .stat-box  { padding: 24px 12px; }
+
+  .offer-head { padding: 18px 14px; }
+  .offer-body { padding: 18px 14px; }
+  .price-val  { font-size: 3.2rem; }
+
+  .who-row    { padding: 12px 14px; gap: 10px; }
+  .who-ico    { width: 32px; height: 32px; }
+
+  .proof-card { padding: 16px 12px; }
+
+  .manifesto-text { font-size: .92rem; }
+}
+
+/* ─── SAFE OVERFLOW GUARD (all sizes) ──────────────────── */
+.section,
+.hero,
+.final-cta,
+.manifesto,
+footer,
+nav,
+.alert-bar {
+  overflow-x: clip;
+}
+/* Prevent absolutely-positioned decorative blobs from causing scroll */
+.hero::before,
+.hero::after,
+.final-cta::before,
+.manifesto::before {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+/* ═══ END RESPONSIVE SYSTEM ═══ */
 
 </style>
 </head>
